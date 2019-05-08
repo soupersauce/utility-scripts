@@ -1,0 +1,16 @@
+#!/bin/bash
+
+mkdir -p $1/inventories/production/group_vars/
+mkdir -p $1/inventories/production/host_vars/
+
+mkdir -p $1/inventories/staging/host_vars/
+mkdir -p $1/inventories/staging/host_vars/
+
+mkdir $1/library
+mkdir $1/module_utils
+mkdir $1/filter_plugins
+
+mkdir -p $1/roles/common
+mkdir $1/roles/webtier
+mkdir $1/roles/monitoring
+mkdir $1/roles/fooapp
