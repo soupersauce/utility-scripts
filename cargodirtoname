@@ -1,9 +1,7 @@
 #!/bin/bash
 
 for f in `ls -d */ | sed 's#/##'`; do
-	if name=`grep name $f/Cargo.toml | cut -d\" -f2` ; then
-		continue
-	fi
+	name=`grep name $f/Cargo.toml | cut -d\" -f2` 
 	
 	if [ "$name" != $f ]; then
  		sed -i "s/${name}/${f}/" $f/Cargo.toml  
